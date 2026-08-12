@@ -1,0 +1,28 @@
+
+class Animal {
+   String name;
+   void show() {
+      System.out.println("this is name of dog :-> " + this.name); 
+   }
+}
+ 
+class Dog extends Animal {
+   String breed = "German-Shepherd";
+  @Override
+   void show() {
+      System.out.println("this is breed of dog :-> " + this.breed);
+      super.show();
+   }
+}
+public class ClassNameHere {
+   public static void main(String[] args) {
+      Dog d = new Dog();
+      d.name = "Jack";
+      d.show();
+      int x = 10;
+      long y = x;
+      int z = (int)y;
+      Animal a = new Dog();
+      Dog c = (Dog)a;
+   }
+}
